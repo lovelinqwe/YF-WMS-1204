@@ -1,0 +1,26 @@
+﻿<Window x:Class="YF_WMS.WPFs.WPF_Box_Manual"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:YF_WMS.WPFs"
+        mc:Ignorable="d"
+        Title="手动添加料箱" Height="400" Width="300">
+    <Grid Margin="0,0,0,-30">
+        <Label Content="料箱编号" HorizontalAlignment="Left" Margin="46,35,0,0" VerticalAlignment="Top"/>
+        <Label Content="料箱颜色" HorizontalAlignment="Left" Margin="46,82,0,0" VerticalAlignment="Top"/>
+        <Label Content="料箱容量" HorizontalAlignment="Left" Margin="46,129,0,0" VerticalAlignment="Top"/>
+        <Label Content="料箱状态" HorizontalAlignment="Left" Margin="46,172,0,0" VerticalAlignment="Top"/>
+        <Label Content="料箱描述" HorizontalAlignment="Left" Margin="46,217,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="box_color" HorizontalAlignment="Left" Height="23" Margin="116,82,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="box_capacity" HorizontalAlignment="Left" Height="23" Margin="116,132,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="box_status" HorizontalAlignment="Left" Height="23" Margin="116,174,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="box_desc" HorizontalAlignment="Left" Height="23" Margin="116,217,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="shelf_id" HorizontalAlignment="Left" Height="23" Margin="116,262,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="库位编号" HorizontalAlignment="Left" Margin="46,260,0,0" VerticalAlignment="Top"/>
+        <Button Content="确定" HorizontalAlignment="Left" Margin="46,328,0,0" VerticalAlignment="Top" Width="75" Click="box_manual_determine"/>
+        <Button Content="取消" HorizontalAlignment="Left" Margin="184,328,0,0" VerticalAlignment="Top" Width="75" Click="box_manual_cancel"/>
+        <TextBox Name="box_id" HorizontalAlignment="Left" Height="23" Margin="116,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,8 @@
+﻿<Window x:Class="YF_WMS.WPF_Kanban"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="看板" Height="500" Width="600">
+    <Grid>
+        
+    </Grid>
+</Window>

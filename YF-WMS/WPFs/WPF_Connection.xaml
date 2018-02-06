@@ -1,0 +1,20 @@
+﻿<Window x:Class="YF_WMS.WPF_Connection"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="数据库连接设置" Height="360" Width="480" ResizeMode="NoResize">
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="116" VerticalAlignment="Top" Width="472" Source="/Resources/Images/NA.jpg"/>
+        <Label Content="IP：" HorizontalAlignment="Left" Margin="64,135,0,0" VerticalAlignment="Top" Width="67" HorizontalContentAlignment="Right"/>
+        <Label Content="端口：" HorizontalAlignment="Left" Margin="64,165,0,0" VerticalAlignment="Top" Width="67" HorizontalContentAlignment="Right"/>
+        <Label Content="用户：" HorizontalAlignment="Left" Margin="64,195,0,0" VerticalAlignment="Top" Width="67" HorizontalContentAlignment="Right"/>
+        <Label Content="密码：" HorizontalAlignment="Left" Margin="64,225,0,0" VerticalAlignment="Top" Width="67" HorizontalContentAlignment="Right"/>
+        <TextBox Name="ip"  HorizontalAlignment="Left" Height="23" Margin="136,135,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="261"/>
+        <TextBox Name="port" HorizontalAlignment="Left" Height="23" Margin="136,165,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="62"/>
+        <TextBox Name="username" HorizontalAlignment="Left" Height="23" Margin="136,195,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="177"/>
+        <PasswordBox Name="password"  HorizontalAlignment="Left" Margin="136,225,0,0" VerticalAlignment="Top" Width="177" Height="23"/>
+        <Button Content="测试连接" HorizontalAlignment="Left" Margin="32,282,0,0" VerticalAlignment="Top" Width="75" Click="DBConn_Test"/>
+        <Button Content="确定" HorizontalAlignment="Left" Margin="276,282,0,0" VerticalAlignment="Top" Width="75" Click="DBConn_Set"/>
+        <Button Content="取消" HorizontalAlignment="Left" Margin="374,282,0,0" VerticalAlignment="Top" Width="75" Click="Back"/>
+
+    </Grid>
+</Window>

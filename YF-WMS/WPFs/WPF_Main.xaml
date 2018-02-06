@@ -1,0 +1,97 @@
+﻿<Window x:Class="YF_WMS.WPF_Main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="YF-WMS (Version 0.1)" Height="600" Width="1200">
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="菜单组1(_F)">
+                    <MenuItem Header="子菜单1.1"></MenuItem>
+                    <MenuItem Header="子菜单1.2"></MenuItem>
+                    <MenuItem Header="子菜单1.3"></MenuItem>
+                    <MenuItem Header="子菜单1.4"></MenuItem>
+                    <MenuItem Header="子菜单1.5"></MenuItem>
+                    <Separator />
+                    <MenuItem Header="子菜单1.6"></MenuItem>
+                    <MenuItem Header="子菜单1.7">
+                        <MenuItem Header="子菜单1.7.1"></MenuItem>
+                        <MenuItem Header="子菜单1.7.2"></MenuItem>
+                        <MenuItem Header="子菜单1.7.3"></MenuItem>
+                    </MenuItem>
+                    <Separator />
+                    <MenuItem Header="退出(_E)" Name="miExit" Click="menuExit_Click"></MenuItem>
+                </MenuItem>
+
+                <MenuItem Header="菜单组2">
+                    <MenuItem Header="子菜单2.1"></MenuItem>
+                    <MenuItem Header="子菜单2.2 - 可选" IsCheckable="True" IsChecked="True" ></MenuItem>
+                    <MenuItem Header="子菜单2.3"></MenuItem>
+                    <MenuItem Header="子菜单2.4"></MenuItem>
+                    <MenuItem Header="子菜单2.5"></MenuItem>
+                </MenuItem>
+
+                <MenuItem Header="菜单组3">
+                    <MenuItem Header="子菜单3.1"></MenuItem>
+                    <MenuItem Header="子菜单3.2"></MenuItem>
+                    <MenuItem Header="子菜单3.3"></MenuItem>
+                    <MenuItem Header="子菜单3.4"></MenuItem>
+                    <MenuItem Header="子菜单3.5"></MenuItem>
+                </MenuItem>
+
+                <MenuItem Header="菜单组4">
+                    <MenuItem Header="子菜单4.1"></MenuItem>
+                    <MenuItem Header="子菜单4.2"></MenuItem>
+                    <MenuItem Header="子菜单4.3"></MenuItem>
+                    <MenuItem Header="子菜单4.4"></MenuItem>
+                    <MenuItem Header="子菜单4.5"></MenuItem>
+                </MenuItem>
+
+                <MenuItem Header="菜单组5">
+                    <MenuItem Header="子菜单5.1"></MenuItem>
+                    <MenuItem Header="子菜单5.2"></MenuItem>
+                    <MenuItem Header="子菜单5.3"></MenuItem>
+                    <MenuItem Header="子菜单5.4"></MenuItem>
+                    <MenuItem Header="子菜单5.5"></MenuItem>
+                </MenuItem>
+
+                <MenuItem Header="帮助(_H)">
+                    <MenuItem Header="帮助手册"></MenuItem>
+                    <MenuItem Header="意见反馈"></MenuItem>
+                    <Separator />
+                    <MenuItem Header="关于(_A)..." Click="menuAbout_Click"></MenuItem>
+                </MenuItem>
+            </Menu>
+            <ToolBar DockPanel.Dock="Top" Height="35">
+                <Button Content="按钮1">
+                </Button >
+                <Button Content="按钮2">
+                </Button>
+                <Button Content="按钮3">
+                </Button>
+            </ToolBar>
+            <Grid  DockPanel.Dock="Left">
+                <GroupBox>
+                    <Grid Width="120">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        
+                        <Button Content="出库管理" HorizontalAlignment="Left" Margin="25,70,0,0" Grid.Row="0" VerticalAlignment="Top" Width="75" Click="Outbound_Show"/>
+                        <Button Content="入库管理" HorizontalAlignment="Left" Margin="25,70,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Inbound_Show"/>
+                        <Button Content="库存管理" HorizontalAlignment="Left" Margin="25,70,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Click="Storage_Show"/>
+                        <Button Content="看板" HorizontalAlignment="Left" Margin="25,70,0,0" Grid.Row="3" VerticalAlignment="Top" Width="75" Click="Board_Show"/>
+                    </Grid>
+                </GroupBox>
+            </Grid>
+            <Grid>
+                <GroupBox>
+                    <Frame Name="mainFrame" NavigationUIVisibility="Visible"></Frame>
+                </GroupBox>
+            </Grid>
+        </DockPanel>
+    </Grid>
+
+</Window>

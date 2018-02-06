@@ -1,0 +1,37 @@
+﻿<Window x:Class="YF_WMS.WPF_PO"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="待入库PO-在途物料" Height="600" Width="900">
+    <Grid>
+        <DataGrid Name="datagridpo" HorizontalAlignment="Left" Margin="10,111,-236,0" VerticalAlignment="Top" Height="449" Width="868" AutoGenerateColumns="False" CanUserAddRows="False" VirtualizingStackPanel.IsVirtualizing="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="采购订单号" Width="100" Binding="{Binding Path=FBillNo}" IsReadOnly="True" 	/>
+                <DataGridTextColumn Header="供应商" Width="100" Binding="{Binding Path=FName}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="物料编号" Width="100" Binding="{Binding Path=FNumber}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="物料规格" Width="100" Binding="{Binding Path=FModel}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="物料名称" Width="100" Binding="{Binding Path=FName1}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="采购时间" Width="100" Binding="{Binding Path=FDate}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="采购数量" Width="150" Binding="{Binding Path=FAuxQty}" IsReadOnly="True"/>
+
+
+
+
+            </DataGrid.Columns>
+            <DataGrid.ContextMenu>
+                <ContextMenu Name="dgmenu1" StaysOpen="true">
+                    <MenuItem Header="删除" Click="Menu_Delete" />
+                    <MenuItem Header="撤回"/>
+                    <MenuItem Header="查看库存" Click="Menu_Storage" />
+                    <MenuItem Header="放入料箱" Click="SetToBox">
+                    </MenuItem>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+        </DataGrid>
+        <Button Content="导出" HorizontalAlignment="Left" Margin="19,84,0,0" VerticalAlignment="Top" Width="75" Click="PO_Export"/>
+        <Button Content="批量放入料箱" HorizontalAlignment="Left" Margin="466,84,0,0" VerticalAlignment="Top" Width="126" Click="BatchSetToBox"/>
+        <Button Content="同步ERP" HorizontalAlignment="Left" Margin="477,28,0,0" VerticalAlignment="Top" Width="75" Click="SynERP"/>
+        <TextBox Name="selectpo" HorizontalAlignment="Left" Height="23" Margin="19,27,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button Content="查找" HorizontalAlignment="Left" Margin="144,28,0,0" VerticalAlignment="Top" Width="75" Click="select"/>
+
+    </Grid>
+</Window>
